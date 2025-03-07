@@ -4,30 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif;;
+    background-color: #907f6f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+
+    .login-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        width: 350px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .btn {
+        background: #9f8e7e;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        transition: background 0.3s;
+    }
+
+    .btn:hover {
+        background: #8b7b6b;
+    }
+
+    .register-text {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .register-text a {
+        color: #9f8e7e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .register-text a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
 </head>
 <body>
-    <form action="../index.html" method="GET">
-        <center>
-            <fieldset style="width: 300px;">
-                <legend> Sign In</legend>
-                <table>
-                    <tr>
-                        <td><label for="email">Email</label></td>
-                        <td>:</td>
-                        <td><input type="email" name="email" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">Password</label></td>
-                        <td>:</td>
-                        <td><input type="password" name="password" required></td>
-                    </tr>
-                    <tr>
-                        <td><a href="../index.html"><button type="submit">Sign In</button></a></td>
-                    </tr>
-                </table>
-                <p> Belum mempunyai akun? <a href="register.html">Sign Up</a></p>
-            </fieldset>
-        </center>
-    </form>
+    <div class="login-container">
+        <h2>Sign In</h2>
+        <form action="../fitur/branding.html" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        <p class="register-text">Belum punya akun? <a href="register.html">Sign Up</a></p>
+    </div>
 </body>
 </html>

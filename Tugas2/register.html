@@ -4,46 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #907f6f;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #9f8e7e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #8b7b6b;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        a {
+            color: #8b7b6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <form action="login.html" method="get">
-        <center>
-            <fieldset style="width: 300px;">
-                <legend>Sign Up</legend>
-                <table>
-                    <tr>
-                        <td><label for="username">Username</label></td>
-                        <td>:</td>
-                        <td><input type="text" name="username" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">Email</label></td>
-                        <td>:</td>
-                        <td><input type="email" name="email" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">Password</label></td>
-                        <td>:</td>
-                        <td><input type="password" name="password" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="repassword">Repeat Password</label></td>
-                        <td>:</td>
-                        <td><input type="password" name="repassword" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="file">Upload Image</label></td>
-                        <td> :</td>
-                        <td><input type="file" name="file" required></td>
-                    </tr>
-                    <tr>
-                        <td><a href="login.html"><button type="submit">Sign Up</button></a></td>
-                    </tr>
-                </table>
-                <p>Sudah mempunyai akun? <a href="login.html">Sign In</a></p>
-            </fieldset>
-        </center>
-        
-    </form>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="login.html" method="get">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="repassword" placeholder="Repeat Password" required>
+            <input type="file" name="file" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Sudah punya akun? <a href="login.html">Sign In</a></p>
+    </div>
+
 </body>
 </html>
